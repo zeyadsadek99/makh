@@ -27,25 +27,25 @@
         <!-- Column 2 -->
         <div class="flex flex-col gap-4 w-full lg:w-[200px]">
           <nuxt-link
-            to="/privacy-policy"
+            to="/government"
             class="text-white hover:text-blue-400 text-base font-bodyFont"
           >
             {{ $t("privacyPolicy") }}
           </nuxt-link>
           <nuxt-link
-            to="/terms"
+            to="/government"
             class="text-white hover:text-blue-400 text-base font-bodyFont"
           >
             {{ $t("termsOfService") }}
           </nuxt-link>
           <nuxt-link
-            to="/careers"
+            to="/government"
             class="text-white hover:text-blue-400 text-base font-bodyFont"
           >
             {{ $t("careers") }}
           </nuxt-link>
           <nuxt-link
-            to="/support"
+            to="/government"
             class="text-white hover:text-blue-400 text-base font-bodyFont"
           >
             {{ $t("support") }}

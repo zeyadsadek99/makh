@@ -29,6 +29,8 @@ export default defineNuxtConfig({
         vueI18nLoader: true,
       },
     ],
+    "nuxt-icons",
+    "@nuxt/image",
   ],
   plugins: ["~/plugins/i18n.client.ts", "~/plugins/fontawesome.ts"],
 
@@ -51,6 +53,7 @@ export default defineNuxtConfig({
   build: {
     transpile: ["vuetify"],
   },
+
   // modules: [
   //   (_options, nuxt) => {
   //     nuxt.hooks.hook("vite:extendConfig", (config) => {

@@ -90,11 +90,7 @@
             <!-- WhatsApp Section -->
             <div class="flex items-center gap-2">
               <a href="https://wa.me/+201098055402" target="_blank">
-                <font-awesome-icon
-                  icon="fa-brands fa-whatsapp"
-                  size="xl"
-                  style="color: #60d36a"
-                />
+                <nuxt-icon name="Vector1" filled />
               </a>
               <a
                 href="https://wa.me/+201098055402"
@@ -151,7 +147,11 @@ configure({
 // Validation Schema
 const validationSchema = yup.object({
   name: yup.string().required(t("required", { field: t("name") })),
-  mobile: yup.string().required(t("required", { field: t("mobile") })),
+  mobile: yup
+    .string()
+    .matches(/^[0-9]{7,15}$/, "Mobile number must be 7-15 digits")
+
+    .required(t("required", { field: t("mobile") })),
   message: yup.string().required(t("required", { field: t("message") })),
 });
 
@@ -163,11 +163,12 @@ const form = ref({
 });
 
 // Submit Function
-const submitForm = (values) => {
+const submitForm = (values, { resetForm }) => {
   console.log("Form submitted with:", values);
   // Clear form after submission
   Object.keys(form.value).forEach((key) => {
     form.value[key] = "";
   });
+  resetForm();
 };
 </script>

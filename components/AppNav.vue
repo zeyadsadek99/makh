@@ -8,16 +8,19 @@
         class="flex gap-3 items-center text-white rounded-lg font-bodyFont cursor-pointer"
       >
         <!-- Icon -->
-        <img src="../public/images/Icon (1).png" alt="" />
+        <nuxt-icon name="switch" filled />
+
         <!-- Current Language -->
         <span class="text-[#7C7C7C]">
           {{ $i18n.locale === "ar" ? "عربي" : "English" }}
         </span>
         <!-- Dropdown Icon -->
-        <font-awesome-icon
+        <nuxt-icon name="arrow-down" filled />
+
+        <!-- <font-awesome-icon
           icon="fa-solid fa-angle-down"
           style="color: #c8c8c8"
-        />
+        /> -->
       </div>
 
       <!-- Dropdown List -->
@@ -43,7 +46,7 @@
     </div>
     <!-- Navbar -->
     <nav
-      class="flex items-end relative justify-between mt-7 px-4 lg:px-20 py-2 bg-custom-green border-b border-custom-gray"
+      class="flex items-end relative justify-between mt-7 px-4 lg:px-20 py-2 border-b border-custom-gray"
     >
       <div class="flex gap-6 items-end">
         <!-- Logo -->
@@ -66,7 +69,7 @@
         <!-- Links -->
         <div
           :class="[
-            mobileMenuOpen ? 'flex absolute top-20 end-1 ' : 'hidden   ',
+            mobileMenuOpen ? 'flex absolute top-20 end-1 ' : 'hidden',
             'lg:flex lg:gap-6 items-end lg:items-center lg:px-0   flex-col  lg:flex-row',
           ]"
         >
@@ -88,21 +91,8 @@
 
       <!-- Buttons  -->
       <div class="hidden lg:flex items-end gap-5">
-        <div
-          class="py-2 px-0.5"
-          :class="{
-            'left-[70px]': $i18n.locale === 'ar',
-            'right-[22px]': $i18n.locale === 'en',
-          }"
-        >
-          <img
-            src="/public/images/search-normal.png"
-            class="w-5 h-5"
-            :class="{
-              'left-8': $i18n.locale === 'ar',
-              'right-4': $i18n.locale === 'en',
-            }"
-          />
+        <div class="py-1 px-0.5">
+          <nuxt-icon name="Vector" class="text-xl" filled />
         </div>
         <button
           @click="login"
@@ -147,7 +137,7 @@
               <div
                 class="absolute z-10 start-0 top-1/2 transform -translate-y-1/2"
               >
-                <img src="/public/images/12.png" class="w-4 h-4" />
+                <nuxt-icon name="search-normal" filled />
               </div>
               <!-- Button -->
               <button
@@ -162,7 +152,7 @@
         <!-- Image Section -->
         <div class="w-full lg:w-1/2 flex justify-center align-bottom items-end">
           <img
-            src="../public/images/image 2.png"
+            src="../public/images/image 2.webp"
             alt="Big Visual"
             class="w-full max-w-md lg:max-w-lg h-auto rounded-lg"
           />
@@ -173,7 +163,7 @@
 </template>
 
 <script setup>
-import { ref, watch, onMounted } from "vue";
+import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 
 const dropdownOpen = ref(false);

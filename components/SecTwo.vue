@@ -20,10 +20,7 @@
         <!-- Description -->
         <div class="mb-8 max-lg:justify-center tracking-wide relative start-3">
           <div class="flex gap-2 items-center max-lg:justify-center">
-            <font-awesome-icon
-              icon="fa-solid fa-check"
-              style="color: #0c5adb"
-            />
+            <nuxt-icon name="Symbol" filled />
 
             <p
               class="text-sm sm:text-[18px] leading-7 text-custom-black font-medium font-customFont"
@@ -32,10 +29,12 @@
             </p>
           </div>
           <div class="flex gap-2 items-center max-lg:justify-center">
-            <font-awesome-icon
+            <nuxt-icon name="Symbol" filled />
+
+            <!-- <font-awesome-icon
               icon="fa-solid fa-check"
               style="color: #0c5adb"
-            />
+            /> -->
 
             <p
               class="text-sm sm:text-[18px] leading-7 text-custom-black font-medium font-customFont"
@@ -50,12 +49,12 @@
           class="flex flex-col sm:flex-row justify-center lg:justify-start gap-6"
         >
           <img
-            src="/images/mobil-app-banner-button-shape1.png.png"
+            src="../public/images/mobil-app-banner-button-shape1.png.png"
             alt="Button 1"
             class="w-[150px] sm:w-[186px] h-[40px] sm:h-[52px] rounded-lg"
           />
           <img
-            src="/images/mobil-app-banner-button-shape2.png.png"
+            src="../public/images/mobil-app-banner-button-shape2.png.png"
             alt="Button 2"
             class="w-[150px] sm:w-[186px] h-[40px] sm:h-[52px] rounded-lg"
           />
@@ -63,11 +62,11 @@
       </div>
 
       <!-- Phone Image -->
-      <div class="relative mx-auto w-[500px] h-[660.78px]">
-        <img
+      <div class="relative mx-auto w-[600px] h-[660.78px]">
+        <NuxtImg
           src="../public/images/iphone-12-mini--blue@2x.png"
           alt="App Display"
-          class="absolute top-[78.13px] w-[500px] h-[660.78px] rounded-lg"
+          class="absolute top-[78.13px] w-[520px] h-[660.78px] rounded-lg"
           :class="{
             'rotate-[25.78deg]': $i18n.locale !== 'ar',
           }"

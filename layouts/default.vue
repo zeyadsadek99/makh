@@ -5,6 +5,7 @@
       <SecOne />
       <SecTwo />
       <SecThree />
+
       <slot></slot>
       <AppFooter />
     </div>
